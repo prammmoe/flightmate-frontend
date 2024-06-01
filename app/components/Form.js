@@ -253,12 +253,13 @@ const Form = () => {
                       </span>
                       /org
                     </p>
-                    <Link
-                      href={`/pesan?id=${flight.id}`}
-                      className="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded text-center"
-                    >
-                      Pesan Sekarang
-                    </Link>
+                    {flight && (
+                      <Link href={`/flight/${flight.id}`}>
+                        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full h-full">
+                          Pilih
+                        </button>
+                      </Link>
+                    )}
                   </div>
                 </div>
               </li>
